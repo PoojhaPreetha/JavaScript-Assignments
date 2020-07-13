@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Current Day and Time</title>
+    </head>
+    <body>
+        <button type="button" onclick="day()">Click</button>
+        <p id="day1"></p>
+        <br>
+        <p id="time"></p>
+        <script>
+        function day() 
+        {
+            var a = new Date();
+            var days = new Array(7);
+            days[0] = "Sunday";
+            days[1] = "Monday";
+            days[2] = "Tuesday";
+            days[3] = "Wednesday";
+            days[4] = "Thursday";
+            days[5] = "Friday";
+            days[6] = "Saturday";
+            var r = days[a.getDay()];
+            document.getElementById("day1").innerHTML = "Today is : " +r+ ".";
+            var hr = a.getHours();
+            var min = a.getMinutes();
+            var sec = a.getSeconds();
+            var b=(hr>=12)? "AM":"PM";
+            hr=(hr>=12)? hr-12:hr;
+            if(hr===0 && b==='PM')
+            {
+                if(min===0 && sec===0)
+                {
+                    hr=12;
+                    b="noon";
+                }
+                else
+                {
+                    hr=12;
+                    b="PM";
+                }
+            }
+            if(hr===0 && b==='AM')
+            {
+                if(min===0 && sec===0)
+                {
+                    hr=12;
+                    b="MidNight";
+                }
+                else
+                {
+                    hr=12;
+                    b="AM";
+                }
+            }
+            document.getElementById('time').innerHTML="Current time is : " +hr+b+ " : " +min+ " : "+sec;
+        }
+        </script>
+    </body>
+</html>

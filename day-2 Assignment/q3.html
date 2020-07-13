@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Current Date
+        </title>
+    </head>
+    <body>
+        <script>
+            var a = new Date();
+            var date = a.getDate();
+            var mon = a.getMonth();
+            var yr = a.getFullYear();
+            if(date<10)
+            {
+                date="0"+date;
+            }
+            if(mon<10)
+            {
+                mon="0"+mon;
+            }
+            
+            // a = mon + "-" + date + "-" + yr;
+            // document.write(a);
+
+            // a = mon + "/" + date + "/" + yr;
+            // document.write(a);
+
+            // a = date + "-" + mon + "-" + yr;
+            // document.write(a);
+            
+            // a = date + "/" + mon + "/" + yr;
+            // document.write(a);
+
+            document.write(mon + "-" + date + "-" + yr +" , " +mon + "/" + date + "/" + yr+" or "+date + "-" + mon + "-" + yr+" , "+date + "/" + mon + "/" + yr);
+
+
+        </script>
+    </body>
+</html>

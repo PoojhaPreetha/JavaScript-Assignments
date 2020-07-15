@@ -1,0 +1,37 @@
+//arrays
+let arr1 = ["one","two","three",4,["5,6"],4];
+let arr2 = ["seven","8",["9",10]];
+let arr3 = ["apple","Orange","banana"];
+let arr4 = ["carrot","brinjal"];
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
+console.log(arr4);
+console.log(Array.isArray(arr2));
+console.log(arr1.indexOf(4));
+console.log(arr2.indexOf("8"));
+console.log(arr3.concat(arr4));
+console.log(arr2.reverse());
+arr3.unshift("Mango");
+console.log(arr3);
+console.log(arr3.shift());
+arr3.push("Melon");
+console.log(arr3);
+console.log(arr3.pop());
+console.log(arr3.copyWithin(0,3));
+let arr5 = Array.from("ABCD");
+console.log(arr5);
+console.log(arr3.includes("apple"));
+let arr6 = arr3.join();
+console.log(arr6);
+console.log(arr3.length);
+console.log(arr1.lastIndexOf(4));
+let t = arr3.sort();
+console.log(t);
+var f = ["Bala", "Origin", "Application", "Man"];
+f.splice(20, "loan", "Keerthi");
+console.log(f);
+console.log(arr3.toString());
+let tp=arr3.valueOf()
+console.log(tp);
+console.log(arr3.fill("pine"));
